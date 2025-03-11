@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "taskcask-common"
+version = "0.0.1"
+authors = [
+  { name="Ignytis", email="155588001+ignytis@users.noreply.github.com" },
+]
+description = "Common components for TaskCask and plugins"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "pydantic>=2.10.5,<3.0.0",
+]
+
+[project.entry-points."taskcask.autoloaders"]
+stdlib = "taskcask.stdlib.autoloader"
+
+[project.urls]
+Homepage = "https://github.com/ignytis/taskcask-common"
+
+[tool.hatch.build]
+only-packages = true
