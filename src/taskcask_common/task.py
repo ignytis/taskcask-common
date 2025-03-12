@@ -5,7 +5,7 @@ import uuid
 
 from pydantic import BaseModel, model_validator
 
-from .task_template import BaseTaskTemplate
+from .task_templates.base import BaseTaskTemplate
 
 
 class Task(BaseModel):
